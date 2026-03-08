@@ -6,17 +6,17 @@ Users can view flights, book tickets, cancel bookings, and generate reports thro
 
 ## Features:
 
-Dashboard Layout: Left sidebar, right content area for smooth navigation.
+**Dashboard Layout:** Left sidebar, right content area for smooth navigation.
 
-Available Flights: Professional, attractive tables that display all flights from the Oracle DB.
+**Available Flights:** Professional, attractive tables that display all flights from the Oracle DB.
 
-Book Flight: Input passenger info, select flight, loyalty tiers, and number of travelers.
+**Book Flight:** Input passenger info, select flight, loyalty tiers, and number of travelers.
 
-Passenger History: Search by Passenger ID, cancel flights with notifications.
+**Passenger History:** Search by Passenger ID, cancel flights with notifications.
 
-Reports: Popular flights & peak booking hours.
+**Reports:** Popular flights & peak booking hours.
 
-Persistent Data: All bookings stored in Oracle DB.
+**Persistent Data:** All bookings stored in Oracle DB.
 
 ## Requirements:
 
