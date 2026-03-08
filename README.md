@@ -17,20 +17,17 @@ Node OracleDB driver (oracledb package)
 Optional: GitHub to clone the repository
 
 ## Installation:
-### 1. Clone the repository:
-git clone https://github.com//AirlineReservation.git cd AirlineReservation
-
-### 2. Install dependencies:
+### 1. Install dependencies:
 npm install express body-parser oracledb open
 
-### 3. Configure Oracle DB connection in db.js:
+### 2. Configure Oracle DB connection in db.js:
 const oracledb = require('oracledb');
 
 async function connectDB() { return await oracledb.getConnection({ user: 'YOUR_DB_USER', password: 'YOUR_DB_PASSWORD', connectString: 'localhost/XE;' }); }
 
 module.exports = connectDB;
 
-### 4. Start the server:
+### 3. Start the server:
 node server.js
 
 The dashboard will automatically open in your browser.
