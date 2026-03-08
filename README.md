@@ -79,11 +79,8 @@ INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F101', 'Jed
 INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F102', 'Lahore (Pakistan)', 'London (UK)', 180);
 INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F103', 'Islamabad (Pakistan)', 'New York (USA)', 160);
 
-
 ## Execute the Project
 1. Run the server: node server.js
 2. Browser opens automatically to the dashboard.
 3. Navigate via sidebar: Available Flights → Book Flight → Passenger History → Reports.
 4. Book flights, view history, cancel flights, and generate reports.
-
-MIT License
