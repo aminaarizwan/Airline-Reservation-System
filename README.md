@@ -11,9 +11,13 @@ Reports: Popular flights & peak booking hours.
 Persistent Data: All bookings stored in Oracle DB.
 
 ## Requirements:
+
 Node.js (v18+ recommended)
+
 Oracle Database (XE or full version)
+
 Node OracleDB driver (oracledb package)
+
 Optional: GitHub to clone the repository
 
 ## Installation:
@@ -46,7 +50,11 @@ INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F102', 'Lah
 INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F103', 'Islamabad (Pakistan)', 'New York (USA)', 160);
 
 ## Execute the Project
+
 Run the server: node server.js
+
 The browser opens automatically to the dashboard.
+
 Navigate via sidebar: Available Flights → Book Flight → Passenger History → Reports.
+
 Book flights, view history, cancel flights, and generate reports.
