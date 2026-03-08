@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg,#193e5e,#052a2c);
+    min-height: 100vh;
+}
+
+header {
+    background:#18293b;
+    color:rgb(255, 255, 255);
+    text-align:center;
+    padding:20px;
+}
+
+header h1 {
+    font-size:32px;
+}
+
+.subtitle {
+    font-size:16px;
+    color:#ffffff;
+}
+
+/* DASHBOARD LAYOUT */
+.container {
+    display:flex;
+    height: calc(100vh - 80px);
+}
+
+/* LEFT DASHBOARD */
+.sidebar {
+    width:250px;
+    background:#618792;
+    color:white;
+    padding:20px;
+}
+
+.sidebar h2 {
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.sidebar button {
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:none;
+    background:#18293b;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.sidebar button:hover {
+    background:#16a085;
+}
+
+/* RIGHT CONTENT */
+.content {
+    flex:1;
+    padding:30px;
+    overflow-y:auto;
+    background:#f4f6f9;
+}
+
+/* TABLE STYLING */
+table {
+    width:100%;
+    border-collapse: collapse;
+    margin-top:10px;
+}
+
+th {
+    background: linear-gradient(90deg,#193e5e,#052a2c);
+    color:white;
+    padding:12px;
+    text-align:center;
+}
+
+td {
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #ccc;
+}
+
+tr:nth-child(even) {
+    background:#e9ecef;
+}
+
+tr:hover {
+    background:#d1e7f0;
+}
+
+/* FORMS */
+input, select {
+    width:100%;
+    padding:10px;
+    margin-bottom:10px;
+    border-radius:6px;
+    border:1px solid #ccc;
+}
+
+button.action {
+    background:#061c2e;
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button.action:hover {
+    background:#4e647e;
+}
+
+/* Loyalty tier colors */
+#loyaltyTier option[value="Silver"] { background:#c0c0c0; color:black; }
+#loyaltyTier option[value="Gold"] { background:#ffd700; color:black; }
+#loyaltyTier option[value="Platinum"] { background:#e5e4e2; color:black; }
+
+/* HIDE LOYALTY BY DEFAULT */
+#loyaltyTier { display:none; }
+
+/* OTHER STYLING */
+.travelers, .from-to, .loyalty-card { margin-bottom:15px; }

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>✈ Airline Reservation System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>✈ Airline Reservation System</h1>
+    <p class="subtitle">Making Travel Easy</p>
+</header>
+
+<div class="container">
+
+    <!-- LEFT DASHBOARD -->
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <button onclick="showSection('flights')">Available Flights</button>
+        <button onclick="showSection('booking')">Book Flight</button>
+        <button onclick="showSection('history')">Passenger History</button>
+        <button onclick="showSection('reports')">Reports</button>
+    </div>
+
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+
+        <!-- AVAILABLE FLIGHTS -->
+        <div id="flightsSection">
+            <h2>Available Flights</h2>
+            <table id="flightTable"></table>
+        </div>
+
+        <!-- BOOK FLIGHT -->
+        <div id="bookingSection" style="display:none;">
+            <h2>Book Flight</h2>
+            <form id="bookingForm">
+
+                <input id="passengerName" placeholder="Passenger Name" required>
+                <input id="passengerId" placeholder="Passenger ID" required>
+                <input id="passengerAge" type="number" placeholder="Age" required>
+
+                <div class="travelers">
+                    <label>Number of Travelers:</label>
+                    <input id="numTravelers" type="number" min="1" value="1" required>
+                </div>
+
+                <div class="from-to">
+                    <select id="fromCity">
+                        <option>Jeddah (Saudi Arabia)</option>
+                        <option>Lahore (Pakistan)</option>
+                        <option>Islamabad (Pakistan)</option>
+                        <option>Dubai (UAE)</option>
+                        <option>London (UK)</option>
+                        <option>New York (USA)</option>
+                    </select>
+                    <select id="toCity">
+                        <option>Dubai (UAE)</option>
+                        <option>London (UK)</option>
+                        <option>New York (USA)</option>
+                        <option>Jeddah (Saudi Arabia)</option>
+                        <option>Paris (France)</option>
+                        <option>Tokyo (Japan)</option>
+                    </select>
+                </div>
+
+                <input id="flightId" placeholder="Flight ID" required>
+
+                <div class="loyalty-card">
+                    <label>Loyalty Card:</label>
+                    <select id="hasLoyaltyCard" onchange="toggleLoyaltyTier()">
+                        <option value="no">No</option>
+                        <option value="yes">Yes</option>
+                    </select>
+                    <select id="loyaltyTier" style="display:none;">
+                        <option>Silver</option>
+                        <option>Gold</option>
+                        <option>Platinum</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="action">Book Flight</button>
+            </form>
+        </div>
+
+        <!-- PASSENGER HISTORY -->
+        <div id="historySection" style="display:none;">
+            <h2>Passenger History</h2>
+            <input id="searchPassenger" placeholder="Passenger ID">
+            <button class="action" onclick="showHistory()">Search</button>
+            <div id="history"></div>
+        </div>
+
+        <!-- REPORTS -->
+        <div id="reportsSection" style="display:none;">
+            <h2>Reports</h2>
+            <button class="action" onclick="showReports()">Generate Reports</button>
+            <div id="reports"></div>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
