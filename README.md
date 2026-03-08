@@ -1,35 +1,39 @@
-# ✈ Airline Reservation System 
-A professional Airline Reservation System with full **Oracle database integration**.  
-Users can view flights, book tickets, cancel bookings, and generate reports through a modern **dashboard UI**.
+# ✈ Airline Reservation System
 
-## **Features**
+A professional Airline Reservation System with **Oracle database integration.**
+Users can view flights, book tickets, cancel bookings, and generate reports through a modern **dashboard UI.**
 
-- **Dashboard Layout**: Left sidebar, right content area.
-- **Available Flights**: Professional, sortable tables from Oracle DB.
-- **Book Flight**: Input passenger info, select flight, loyalty tiers, and number of travelers.
-- **Passenger History**: Search by ID, cancel flights with notifications.
-- **Reports**: Popular flights & peak booking hours.
-- **Persistent Data**: All bookings stored in Oracle DB.
 
-## **Requirements**
+## Features:
+
+- Dashboard Layout: Left sidebar, right content area for smooth navigation.
+- Available Flights: Professional, attractive tables displaying all flights from Oracle DB.
+- Book Flight: Input passenger info, select flight, loyalty tiers, and number of travelers.
+- Passenger History: Search by Passenger ID, cancel flights with notifications.
+- Reports: Popular flights & peak booking hours.
+- Persistent Data: All bookings stored in Oracle DB.
+
+
+## Requirements:
 
 - Node.js (v18+ recommended)
 - Oracle Database (XE or full version)
-- Node OracleDB driver (`oracledb` package)
+- Node OracleDB driver (oracledb package)
+- Optional: GitHub to clone the repository
 
-## **Installation**
 
-1. Clone the repository:
+## Installation:
 
-```bash
+### 1. Clone the repository:
+
 git clone https://github.com/<your-username>/AirlineReservation.git
 cd AirlineReservation
 
-## **Installation Dependencies**
+### 2. Install dependencies:
 
 npm install express body-parser oracledb open
 
-Configure Oracle DB in db.js:
+### 3. Configure Oracle DB connection in db.js:
 
 const oracledb = require('oracledb');
 
@@ -43,17 +47,17 @@ async function connectDB() {
 
 module.exports = connectDB;
 
-Start the server:
+### 4. Start the server:
 
 node server.js
 
-The dashboard will automatically open in your browser.
+> The dashboard will automatically open in your browser.
 
-## **Database Setup**
+## Database Setup:
 
-Create tables for Flights, Reservations, and optionally Passengers in SQL Plus
+Create tables for Flights, Reservations, and optionally Passengers in SQL Plus:
 
--- Flights table
+Flights table
 CREATE TABLE Flights (
   flight_id VARCHAR2(10) PRIMARY KEY,
   origin VARCHAR2(50),
@@ -61,7 +65,7 @@ CREATE TABLE Flights (
   seats NUMBER
 );
 
--- Reservations table
+Reservations table
 CREATE TABLE Reservations (
   reservation_id NUMBER PRIMARY KEY,
   passenger_id VARCHAR2(10),
@@ -70,9 +74,15 @@ CREATE TABLE Reservations (
   booking_date DATE
 );
 
-Populate Flights with sample data for testing.
+Optional: Populate Flights with sample data
+INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F101', 'Jeddah (Saudi Arabia)', 'Dubai (UAE)', 100);
+INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F102', 'Lahore (Pakistan)', 'London (UK)', 180);
+INSERT INTO Flights (flight_id, origin, destination, seats) VALUES ('F103', 'Islamabad (Pakistan)', 'New York (USA)', 160);
 
-## **File Strcuture**
+---
+
+## File Structure:
+
 AirlineReservation/
 │
 ├── index.html        # Dashboard frontend
@@ -80,15 +90,14 @@ AirlineReservation/
 ├── script.js         # JS for frontend interactions
 ├── server.js         # Express server connecting to Oracle
 ├── db.js             # Oracle DB connection
-├── README.md
+├── README.txt        # This file
 
 
-## **RUN THE PROJECT**
+## Execute the Project
+1. Run the server: node server.js
+2. Browser opens automatically to the dashboard.
+3. Navigate via sidebar: Available Flights → Book Flight → Passenger History → Reports.
+4. Book flights, view history, cancel flights, and generate reports.
+License:
 
-Run the server: node server.js
-
-The browser opens automatically to the dashboard.
-
-Navigate via sidebar: Available Flights → Book Flight → Passenger History → Reports.
-
-Book flights, view history, cancel flights, and generate reports.
+MIT License
